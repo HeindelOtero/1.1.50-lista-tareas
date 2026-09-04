@@ -63,3 +63,13 @@ npm run dev
 ```
 
 3. Abre [http://localhost:3000](http://localhost:3000).
+
+<!-- BEGIN cc:que-se-valora -->
+¡Hola! Aquí te explico qué es lo que miraremos con lupa cuando corrijamos tu proyecto "Lista Tareas".
+
+## 📋 Qué se valora
+
+Cuando revisemos tu proyecto, lo que más pesa es que la aplicación funcione correctamente y que cumpla con todo lo que se pide en el enunciado. También le damos un peso importante a la calidad de tu código y a cómo has estructurado el proyecto, buscando que sea claro y bien organizado. Además, es importante que nos cuentes tus decisiones y que la documentación sea útil, aunque esto tiene un peso menor. Finalmente, el vídeo demo también es importante, ya que nos ayuda a entender cómo funciona tu aplicación desde tu perspectiva.
+
+Recuerda que el enunciado del proyecto es la guía principal y la evaluación no penalizará por cosas que no se pidan explícitamente en él.
+<!-- END cc:que-se-valora -->
