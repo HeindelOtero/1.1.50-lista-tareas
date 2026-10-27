@@ -54,7 +54,13 @@ lib/
 
 ## 🚀 Cómo ejecutar
 
-1. Arranca MongoDB en local (`mongodb://localhost:27017`).
+1. Arranca MongoDB en local (`mongodb://localhost:27017`). Si no lo tienes instalado, lo más rápido es con Docker:
+
+   ```bash
+   docker run -d --name mongo -p 27017:27017 mongo:7
+   ```
+
+   (No es obligatorio usar Docker: vale cualquier MongoDB accesible en ese puerto.)
 2. Instala y ejecuta:
 
 ```bash
