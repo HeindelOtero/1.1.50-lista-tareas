@@ -70,6 +70,28 @@ npm run dev
 
 3. Abre [http://localhost:3000](http://localhost:3000).
 
+## 📝 Notas de la entrega
+
+### Configuración
+
+Copia `.env.example` como `.env.local`. Por defecto usa `mongodb://localhost:27017` y la base de datos `lista-tareas`. Si no existe `.env.local`, la app usa esos mismos valores.
+
+### API
+
+| Método | Ruta | Qué hace | Respuestas |
+|--------|------|----------|------------|
+| `GET` | `/api/tasks` | Lista las tareas (más nuevas primero) | `200` |
+| `POST` | `/api/tasks` | Crea una tarea. Body: `{ "title": "..." }` | `201`, `400` si el título está vacío |
+| `PUT` | `/api/tasks/[id]` | Actualiza `title` y/o `completed` | `200`, `400` si el id o los datos no son válidos, `404` si no existe |
+| `DELETE` | `/api/tasks/[id]` | Elimina la tarea | `200`, `400` id no válido, `404` si no existe |
+
+### Decisiones
+
+- **`lib/tasks.ts`** centraliza los tipos: `TaskDoc` (cómo se guarda en MongoDB) y `Task` (cómo viaja al navegador, con el `_id` como texto). Así el cliente y la API comparten el mismo tipo.
+- **Validación en el servidor**: el título se recorta (`trim`) y no puede quedar vacío; los ids se comprueban con `ObjectId.isValid` antes de convertirlos, para devolver `400` en lugar de un error 500.
+- **Next.js 16**: en las rutas dinámicas `params` es una `Promise`, por eso se hace `await params`.
+- **Interfaz**: el campo de nueva tarea se vacía en cuanto se envía (si falla, se recupera el texto); la edición se hace en la misma fila; los errores de la API se muestran en un aviso.
+
 <!-- BEGIN cc:que-se-valora -->
 ¡Hola! Aquí te explico qué es lo que miraremos con lupa cuando corrijamos tu proyecto "Lista Tareas".
 
