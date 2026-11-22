@@ -72,6 +72,10 @@ npm run dev
 
 ## 📝 Notas de la entrega
 
+### 🎬 Video demo
+
+[Ver el video en Google Drive](https://drive.google.com/file/d/1QZyY5IqJpbLl9e16TKFeuSe6ngRcy7Q-/view)
+
 ### Configuración
 
 Copia `.env.example` como `.env.local`. Por defecto usa `mongodb://localhost:27017` y la base de datos `lista-tareas`. Si no existe `.env.local`, la app usa esos mismos valores.
